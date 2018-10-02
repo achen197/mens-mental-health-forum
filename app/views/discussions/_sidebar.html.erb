@@ -1,0 +1,18 @@
+<div class="column is-3 is-offset-1">
+  <h3 class="title is-5">Channels</h3>
+
+  <i class="materials-icon plus"> 
+    <%= link_to 'Create Channel', new_channel_path, class:'button channel-btn' %>
+  </i>
+  
+
+
+  <ul class="list">
+    <% @channels.each do |c| %>
+    <li><%= link_to c.channel, c %></li>
+    <% end %>
+  </ul>
+
+  <hr>
+
+</div>
