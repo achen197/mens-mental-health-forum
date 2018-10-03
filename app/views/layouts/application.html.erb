@@ -41,7 +41,12 @@
           <% if user_signed_in? %>
           <div class="navbar-item">
             <div class="field is-grouped">
-              <%= link_to 'New Discussion', new_discussion_path, class:"button is-info" %>
+              <%= link_to 'New Discussion', new_discussion_path, class:"button discussion-btn" %>
+
+              <i class="material-icons">mail_outline</i>
+
+              <i class="material-icons">notifications</i>
+
             </div>
           </div>
           <div class="navbar-item has-dropdown is-hoverable">
@@ -54,15 +59,6 @@
          <% else %>
          <div class="navbar-item">
           <div class="field is-grouped">
-
-
-            <p class="control">
-              <%= link_to 'New Discussion', new_discussion_path, class:"button discussion-btn" %>
-            </p>
-
-            <i class="material-icons">mail_outline</i>
-
-            <i class="material-icons">notifications</i>
 
             <p class="control">
               <%= link_to "Login", new_user_session_path, class: "login-btn"%>
@@ -78,6 +74,14 @@
         </div>
     </div>
   </nav>
+
+<section class="section">
+  <div class="container discover-container">
+    <%= render "shared/discover" %>
+  </div>
+</section>
+
+
 
 <section class="section">
   <div class="container">
