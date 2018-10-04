@@ -75,7 +75,16 @@ class DiscussionsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # def discussion_params
+    #   params.require(:discussion).permit(:title, :content, :channel_id)
+    # end
+
     def discussion_params
-      params.require(:discussion).permit(:title, :content, :channel_id)
+      if params[:title]
+        @discussion = Discussion.where('title LIKE ?', "%#{params[:title]}%")
+      else
+        @discussion = Discussion.all
+      end
     end
+
 end
