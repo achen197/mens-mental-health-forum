@@ -27,7 +27,7 @@
      <nav class="navbar main-nav" role="navigation" aria-label="main navigation">
       <div class="navbar-brand logo-img">
         <%= link_to root_path do %>
-          <h1 class="title is-5">Mens Things</h1>
+          <h1 class="title is-5">Mens Forum Thing</h1>
         <% end  %>
       <div class="navbar-burger burger" data-target="navbar">
         <span></span>
@@ -38,6 +38,12 @@
 
       <div id="navbar" class="navbar-menu">
         <div class="navbar-end">
+          <div class="navbar-item">
+          <%= form_tag(discussions_path method: :get) do %>
+            <%= text_field_tag :title, params[:title] %>
+            <%= submit_tag 'Search' %>
+          <% end %>
+          </div>
           <% if user_signed_in? %>
           <div class="navbar-item">
             <div class="field is-grouped">
