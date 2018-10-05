@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index'
-  post 'search' => 'discussions#search', as: 'discussions_search'
+  match 'search' => 'discussions#search', as: 'discussions_search', via: [:get, :post]
 
   resources :channels
   resources :discussions do
