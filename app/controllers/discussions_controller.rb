@@ -64,6 +64,12 @@ class DiscussionsController < ApplicationController
     end
   end
 
+  def search
+    @search_terms = params[:text]
+    @discussions = Discussion.where(discussion[:title].matches("%#{@search_terms}%")).or(
+                   Discussion.where(discussion[:content].matches("%#{@search_terms}%")))
+  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_discussion

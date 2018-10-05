@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index'
+  post 'search' => 'discussions#search', as: 'discussions_search'
 
   resources :channels
   resources :discussions do
