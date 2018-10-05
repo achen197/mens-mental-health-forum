@@ -14,10 +14,10 @@
   </div>
 
   <div class="field">
-    <label class="label">Channel</label>
+    <label class="label">Topic</label>
     <div class="control has-icons-left">
       <span class="select">
-        <%= f.input_field :channel_id, collection:@channels.map { |c| [c.channel, c.id] }, prompt: "Select channel" %>
+        <%= f.input_field :channel_id, collection:@channels.map { |c| [c.channel, c.id] }, prompt: "Select topic" %>
       </span>
       <span class="icon is-small is-left">
         <i class="fa fa-tag"></i>

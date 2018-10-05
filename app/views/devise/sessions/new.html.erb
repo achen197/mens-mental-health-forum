@@ -2,12 +2,15 @@
 	<div class="container login-container">
 
     <div class="column is-6 login-img">
-     <%= image_tag("https://cdn1.vectorstock.com/i/1000x1000/83/85/set-of-isometric-people-vector-13598385.jpg", :alt => "rss feed") %>
+     <%= image_tag("https://cdn2.vectorstock.com/i/1000x1000/08/71/set-of-isometric-people-modern-young-people-vector-15270871.jpg", :alt => "rss feed") %>
     </div>
 
 		<div class="column is-6">
+      <div class="login-logo">
+        <%= image_tag("talk-logo.png", :alt => "rss feed") %>
+      </div>
 			<div class="column is-8 login-form">
-				<h3 class="title is-2">Let's talk.</h3>
+				<h3 class="title is-2">Welcome to talk.</h3>
 				<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
           <div class="field">
