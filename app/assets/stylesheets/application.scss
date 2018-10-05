@@ -18,8 +18,8 @@
 @import "functions";
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -56,6 +56,7 @@ a {
 
 .discussion-title {
   margin-bottom: 0;
+  line-height: 3.5rem;
 }
 
 .button {
@@ -70,16 +71,20 @@ a {
 }
 
 .discussion-btn:hover {
-  background: blue;
+  background: #1672b3;
   transition: 0.2s;
   color: white;
 }
 
-.posted-ago p
-{
+.posted-ago p {
   font-size: 0.9rem;
   color: #7e7e7e;
   font-weight: 300;
+  line-height: 1.8rem;
+}
+
+.content p:not(:last-child) {
+  margin-bottom: 0;
 }
 
 .register-btn, .login-btn {
@@ -92,7 +97,7 @@ a {
 }
 
 .register-btn:hover, .login-btn:hover {
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #1672b3;
 }
 
 .channel-btn {
@@ -108,10 +113,22 @@ a {
 }
 
 .discussion-container {
-  border: 1px solid #d4d4d4;
-  border-radius: 25px;
+  border-bottom: 1px solid #f4f4f4;
+  // border-radius: 15px;
   padding: 1rem;
-  margin-bottom: 2rem !important;
+  margin-bottom: 1rem !important;
+  .discussions-channel a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: orange;
+  }
+  h3 {
+    padding-top: 0.25rem;
+  }
+  .title {
+    line-height: 28px;
+  }
 }
 
 .disucssion-content p{
@@ -127,22 +144,106 @@ a {
     padding: 0;
   }
   .login-form {
-    margin: 2rem;
+    display: block;
+    margin: 0 auto;
   }
 }
 
 .primary-btn {
+  border-radius: 55px !important;
+  background: #1FA2FF;
   border: none;
-  font-size: 0.825rem;
-  color: #555;
-  display: flex;
-  padding-top: 0.425rem;
-  padding-top: rem;
+  color: white;
+  font-weight: 700;
+}
+
+.primary-btn:hover {
+  background: #1672b3;
+  transition: 0.2s;
+  color: white;
+}
+
+.primary-btn, .long {
+  padding: 0 8.825rem;
 }
 
 .control label .boolean {
-  margin-right: 0.5rem;
+  margin: 1.825rem 0.5rem 0.5rem 0;
   display: inline-flex;
 }
 
+.input {
+	z-index: 1;
+	display: inline-block;
+	max-width: 350px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
 
+.input__field {
+	position: relative;
+	display: block;
+	padding: 0.8em;
+	width: 80%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: bold;
+  -webkit-appearance: none; /* for box shadows to show on iOS */
+  box-shadow: none;
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #6a7989;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.login-form-btn {
+  width: 80%;
+  margin-top: 3.5rem;
+  .primary-btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.password-control {
+  a {
+    float: right;
+    padding-right: 20%;
+    font-size: 0.75rem;
+    color: #555;
+    font-weight: 300;
+    padding-top: 0.35rem;
+  }
+}
+
+//Individual Discussion
+
+.single-discussion {
+  .title:not(.is-spaced) + .subtitle {
+    font-weight: 300;
+    padding-top: 1rem;
+  }
+  p {
+    line-height: 2rem;
+  }
+}
