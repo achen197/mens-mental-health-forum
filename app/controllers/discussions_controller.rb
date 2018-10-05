@@ -6,13 +6,13 @@ class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index
-    @discussions = Discussion.all.order('created_at desc')
+    @discussions = Discussion.all.order(discussion[:created_at].desc)
   end
 
   # GET /discussions/1
   # GET /discussions/1.json
   def show
-    @discussions = Discussion.all.order('created_at desc')
+    @discussions = Discussion.all.order(discussion[:created_at].desc)
   end
 
   # GET /discussions/new
@@ -59,32 +59,39 @@ class DiscussionsController < ApplicationController
   def destroy
     @discussion.destroy
     respond_to do |format|
-      format.html { redirect_to discussions_url, notice: 'Discussion was successfully destroyed.' }
+      format.html { redirect_to discussions_url, notice: 'Discussion was successfully deleted.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_discussion
-      @discussion = Discussion.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_discussion
+    @discussion = Discussion.find(params[:id])
+  end
 
-    def find_channels
-      @channels = Channel.all.order('created_at desc')
-    end
+  def find_channels
+    @channels = Channel.all.order(channel[:created_at].desc)
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    # def discussion_params
-    #   params.require(:discussion).permit(:title, :content, :channel_id)
-    # end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def discussion_params
+    params.require(:discussion).permit(:title, :content, :channel_id)
+  end
 
-    def discussion_params
-      if params[:title]
-        @discussion = Discussion.where('title LIKE ?', "%#{params[:title]}%")
-      else
-        @discussion = Discussion.all
-      end
-    end
+  # def discussions_from_params
+  #   if params[:title]
+  #     Discussion.where(discussion[:title].matches("%#{params[:title]}%"))
+  #   else
+  #     Discussion.all
+  #   end
+  # end
 
+  def discussion
+    Discussion.arel_table
+  end
+
+  def channel
+    Channel.arel_table
+  end
 end

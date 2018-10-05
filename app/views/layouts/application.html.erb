@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,700" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Rubik:300,400,700" %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -40,14 +40,14 @@
         <div class="navbar-end">
           <div class="navbar-item">
           <%= form_tag(discussions_path method: :get) do %>
-            <%= text_field_tag :title, params[:title] %>
+            <%= text_field_tag :title, params[:title], placeholder: "Search..."%>
             <%= submit_tag 'Search' %>
           <% end %>
           </div>
           <% if user_signed_in? %>
           <div class="navbar-item">
             <div class="field is-grouped">
-              <%= link_to 'New Discussion', new_discussion_path, class:"button is-info" %>
+              <%= link_to 'New Discussion', new_discussion_path, class:"button discussion-btn" %>
             </div>
           </div>
           <div class="navbar-item has-dropdown is-hoverable">
@@ -85,11 +85,13 @@
     </div>
   </nav>
 
-<section class="section">
-  <div class="container">
-    <%= yield %>
-  </div>
-</section>
+<div class="main-container">
+  <section class="section">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </section>
+</div>
 
   </body>
 </html>
