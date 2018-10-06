@@ -1,8 +1,20 @@
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-4">
-				<h2 class="title is-2">Register</h2>
+<section class="section section-register">
+  <div class="container register-container">
+
+    <div class="column is-6 register-img">
+     <%= image_tag("https://i.pinimg.com/736x/42/93/93/42939338a94eda5a7c641c95895a1ccb--illustration-art-art-illustrations.jpg", :alt => "rss feed") %>
+    </div>
+
+      <div class="column is-6">
+
+          <div class="login-logo">
+        <%= image_tag("letstalk-logo.png", :alt => "rss feed") %>
+      </div>
+
+        	<div class="column is-8 login-form">
+				<h2 class="title is-3">Hey there stranger 👋</h2>
+        <h2 class="title is-3">Join our safe space.</h2>
+
 
 				<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 				  <%= f.error_notification %>
@@ -11,35 +23,36 @@
 
 				  <div class="field">
 				  	<div class="control">
-				    	<%= f.input :username, required: true,  input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+				    	<%= f.input :username, required: true,  input_html: { class: "input input-reg input__field"}, wrapper: false, label_html: { class: "label" } %>
 				    </div>
 				  </div>
 
 
           <div class="field">
             <div class="control">
-				    <%= f.input :email, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+				    <%= f.input :email, required: true, input_html: { class: "input input-reg input__field"}, wrapper: false, label_html: { class: "label" } %>
 				  	</div>
 					</div>
 
           <div class="field">
             <div class="control">
-				    <%= f.input :password, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+				    <%= f.input :password, required: true, input_html: { class: "input input-reg input__field"}, wrapper: false, label_html: { class: "label" }, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
 				  	</div>
 					</div>
 
           <div class="field">
             <div class="control">
-				    <%= f.input :password_confirmation, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+				    <%= f.input :password_confirmation, required: true, input_html: { class: "input input-reg input__field"}, wrapper: false, label_html: { class: "label" } %>
 				  	</div>
 					</div>
 
-				<%= f.button :submit, "Sign up", class:"button is-info is-medium" %>
-
+<div class="login-form-btn">
+				<%= f.button :submit, "Sign up", class:"button primary-btn long" %>
+</div>
 				<% end %>
 				<br />
-				<%= render "devise/shared/links" %>
+				Already talking with us? <%= render "devise/shared/links" %>
 			</div>
-		</div>
+    </div>
 	</div>
 </section>

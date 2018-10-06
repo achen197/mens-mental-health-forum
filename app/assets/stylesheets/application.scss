@@ -142,16 +142,20 @@ a {
   }
 }
 
+.topic-list li a {
+  line-height: 2rem;
+}
+
 .disucssion-content p{
   color: green;
   font-size: 0.825rem;
 }
 
-.login-container {
+.login-container, .register-container {
   display: inline-flex;
   max-width: 100%;
   width: 100%;
-  .login-img {
+  .login-img, .register-img {
     padding: 0;
   }
   .login-form, .login-logo {
@@ -159,9 +163,9 @@ a {
     margin-left: 40%;
   }
   .login-logo img {
-    max-width: 40%;
-    margin-left: 30%;
-    margin-bottom: 3rem;
+    max-width: 65%;
+    margin-left: 20%;
+    margin-bottom: 1rem;
   }
 }
 
@@ -180,7 +184,7 @@ a {
 }
 
 .primary-btn, .long {
-  padding: 0 8.825rem;
+  padding: 0 10rem;
 }
 
 .search-bar {
@@ -201,7 +205,7 @@ a {
   display: inline-flex;
 }
 
-.input {
+.input, .input-reg {
 	z-index: 1;
 	display: inline-block;
 	max-width: 350px;
@@ -209,11 +213,15 @@ a {
 	vertical-align: top;
 }
 
-.input__field {
+.input-reg {
+  max-width: 365px;
+}
+
+.input__field, .input__field__full {
 	position: relative;
 	display: block;
 	padding: 0.8em;
-	width: 80%;
+	width: 100%;
 	border: none;
 	border-radius: 3px;
 	background: #f0f0f0;
@@ -258,7 +266,7 @@ a {
 .password-control {
   a {
     float: right;
-    padding-right: 20%;
+    padding-right: 10%;
     font-size: 0.75rem;
     color: #555;
     font-weight: 300;
@@ -276,4 +284,12 @@ a {
   p {
     line-height: 2rem;
   }
+  .disucssion-channel {
+    a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: orange;
+  }
+}
 }
