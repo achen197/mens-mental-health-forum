@@ -1,33 +1,38 @@
-<section class="section">
-	<div class="container">
-		<div class="columns is-centered">
-			<div class="column is-4">
-				<h2 class="title is-2">Log in</h2>
+<section class="section section-login">
+	<div class="container login-container">
+
+    <div class="column is-6 login-img">
+     <%= image_tag("https://cdn2.vectorstock.com/i/1000x1000/08/71/set-of-isometric-people-modern-young-people-vector-15270871.jpg", :alt => "rss feed") %>
+    </div>
+
+		<div class="column is-6">
+      <div class="login-logo">
+        <%= image_tag("letstalk-logo.png", :alt => "rss feed") %>
+      </div>
+			<div class="column is-8 login-form">
+				<h3 class="title is-2">It's nice to see you again.</h3>
 				<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-				  <div class="field">
-				  	<div class="control">
-				    	<%= f.input :email, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
-				    </div>
-				  </div>
-
-				  <div class="field">
-				  	<div class="control">
-				    <%= f.input :password, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+          <div class="field">
+				  	<div class="control email-control">
+				    <%= f.input :email, required: false, input_html: { class: "input input__field"}, wrapper: false, label_html: { class: "label" } %>
 						</div>
 					</div>
 
-					<div class="field">
-				  	<div class="control">
-				    <%= f.input :remember_me, wrapper: false, as: :boolean if devise_mapping.rememberable? %>
-				  	</div>
+				  <div class="field">
+				  	<div class="control password-control">
+				    <%= f.input :password, required: false, input_html: { class: "input input__field"}, wrapper: false, label_html: { class: "label" } %>
+            <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+						</div>
 					</div>
 
-				  <%= f.button :submit, "Log in", class:"button is-info is-medium" %>
+        <div class="login-form-btn">
+				  <%= f.button :submit, "Login", class:"button primary-btn long" %>
 				<% end %>
+        </div>
 				<br/>
 				<%= render "devise/shared/links" %>
 			</div>
 		</div>
-	</div>
+  </div>
 </section>

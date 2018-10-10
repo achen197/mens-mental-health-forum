@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mens Forum Thing</title>
+    <title>let's talk. | Men's Health Forum</title>
     <%= csrf_meta_tags %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,700" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Rubik:300,400,700" %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
 
   </head>
 
@@ -27,7 +28,7 @@
      <nav class="navbar main-nav" role="navigation" aria-label="main navigation">
       <div class="navbar-brand logo-img">
         <%= link_to root_path do %>
-          <h1 class="title is-5">Mens Things</h1>
+          <h1 class="title is-5">let's talk.</h1>
         <% end  %>
       <div class="navbar-burger burger" data-target="navbar">
         <span></span>
@@ -38,10 +39,15 @@
 
       <div id="navbar" class="navbar-menu">
         <div class="navbar-end">
+          <div class="navbar-item">
+          <%= form_tag(discussions_search_path method: :post) do %>
+            <%= text_field_tag :text, params[:text], placeholder: "Search...", class: 'search-bar'%>
+          <% end %>
+          </div>
           <% if user_signed_in? %>
           <div class="navbar-item">
             <div class="field is-grouped">
-              <%= link_to 'New Discussion', new_discussion_path, class:"button is-info" %>
+              <%= link_to 'New Discussion', new_discussion_path, class:"button discussion-btn" %>
             </div>
           </div>
           <div class="navbar-item has-dropdown is-hoverable">
@@ -60,10 +66,6 @@
               <%= link_to 'New Discussion', new_discussion_path, class:"button discussion-btn" %>
             </p>
 
-            <i class="material-icons">mail_outline</i>
-
-            <i class="material-icons">notifications</i>
-
             <p class="control">
               <%= link_to "Login", new_user_session_path, class: "login-btn"%>
             </p>
@@ -79,11 +81,13 @@
     </div>
   </nav>
 
-<section class="section">
-  <div class="container">
-    <%= yield %>
-  </div>
-</section>
+<div class="main-container">
+  <section class="section">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </section>
+</div>
 
   </body>
 </html>
