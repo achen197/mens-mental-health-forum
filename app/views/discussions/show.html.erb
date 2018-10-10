@@ -1,11 +1,13 @@
 <div class="columns single-discussion">
-  <div class="column discussion-channel is-8">
-  <%= link_to @discussion.channel.channel, @discussion.channel %>
+  <div class="column discussion-channel discussion-article is-8">
+   <%= link_to @discussion.channel.channel, @discussion.channel, :class => "discussion-title" %>
     <h1 class="title is-2 discussion-title"><%= @discussion.title %></h1>
-    <h3 class="subtitle is-5">by <%= @discussion.user.username %></h3>
-     <figure class="image is-48x48">
+    <div class="discussions-author">
+      <figure class="image is-48x48">
         <%= gravatar_image_tag(@discussion.user.email, class: 'border-radius-50', size: 48, alt: @discussion.user.username) %>
       </figure>
+    <h4 class="single-disucssions-author">by <%= @discussion.user.username %></h4>
+      </div>
     <div class="level">
       <div class="level-left"></div>
       <div class="level-right">
@@ -19,7 +21,7 @@
     </div>
     <div class="content"><%= markdown(@discussion.content) %></div>
 
-    <h2 class="subtitle is-5 has-text-grey"><%= pluralize(@discussion.replies.count, "Reply") %></h2>
+    <h3 class="subtitle is-5 has-text-grey"><%= pluralize(@discussion.replies.count, "Comment") %></h3>
 
     <div id="discussion-replies">
       <%= render @discussion.replies %>
@@ -27,12 +29,12 @@
 
     <hr />
 
-    <h3 class="subtitle is-3 has-text-grey">Leave a reply</h3>
+    <h3 class="subtitle is-3 has-text-grey">Leave a comment</h3>
     <% if user_signed_in? %>
       <%= render 'replies/form' %>
     <% else %>
-    <p>To reply you need to <%= link_to 'login', new_user_session_path %>. Don't have an account?
-      <%= link_to 'Sign up', new_user_registration_path %> for one.</p>
+    <p><%= link_to 'Login', new_user_session_path %> to leave a comment. Don't have an account?
+      <%= link_to 'Register', new_user_registration_path %> for one.</p>
     <% end %>
 
   </div>

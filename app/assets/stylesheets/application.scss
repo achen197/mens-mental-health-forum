@@ -56,8 +56,13 @@ a {
 }
 
 .textarea {
-  height: 250px;
-  font-family: Monaco, san-serif;
+  height: 150px;
+  font-size: .9rem;
+  padding: 1rem;
+}
+
+.textarea-lg {
+  height: 300px;
   font-size: .9rem;
   padding: 1rem;
 }
@@ -106,7 +111,7 @@ a {
 }
 
 .register-btn:hover, .login-btn:hover {
-  border-bottom: 2px solid #1672b3;
+  border-bottom: 2px solid #1FA2FF;
 }
 
 .channel-btn {
@@ -139,7 +144,18 @@ a {
   .title {
     line-height: 28px;
   }
+}
+}
+
+.single-discussion {
+  .discussion-channel, .discussion-article {
+    .discussion-tite a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: orange;
   }
+}
 }
 
 .topic-list li a {
@@ -169,6 +185,10 @@ a {
   }
 }
 
+.section-register {
+  padding: 1rem 0.5rem;
+}
+
 .primary-btn {
   border-radius: 55px !important;
   background: #1FA2FF;
@@ -185,6 +205,10 @@ a {
 
 .primary-btn, .long {
   padding: 0 10rem;
+}
+
+.primary-btn, .short {
+  padding: 0 2rem;
 }
 
 .search-bar {
@@ -274,6 +298,14 @@ a {
   }
 }
 
+.control .hint {
+  padding-right: 10%;
+  font-size: 0.75rem;
+  color: #555;
+  font-weight: 300;
+  padding-top: 0.35rem;
+}
+
 //Individual Discussion
 
 .single-discussion {
@@ -292,4 +324,13 @@ a {
     color: orange;
   }
 }
+}
+
+.discussions-author {
+  display: inline-flex;
+  h4 {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
 }

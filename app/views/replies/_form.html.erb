@@ -2,10 +2,10 @@
 
 <div class="field">
   <div class="control">
-    <%= f.input :reply, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' } %>
+    <%= f.input :reply, required: false, input_html: { class: 'textarea input input__field' }, wrapper: false, label_html: { class: 'label' } %>
   </div>
 </div>
 
-<%= f.button :submit, 'Leave a reply', class:'button is-info' %>
+<%= f.button :submit, 'Comment', class:'button primary-btn short mt10' %>
 
 <% end %>
