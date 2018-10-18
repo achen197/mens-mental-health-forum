@@ -3,6 +3,7 @@ class DiscussionsController < ApplicationController
   before_action :find_channels, only: [:index, :show, :new, :edit]
   before_action :authenticate_user!, except: [:index, :show]
 
+
   # GET /discussions
   # GET /discussions.json
   def index
