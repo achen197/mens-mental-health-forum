@@ -14,3 +14,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require popper
+//= require bootstrap
+
+    // app/assets/javascripts/application.js
+
+

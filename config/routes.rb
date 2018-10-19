@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  resources :comments
   # get 'home/index'
   get '/splash' => 'discussions#splash'
   match 'search' => 'discussions#search', as: 'discussions_search', via: [:get, :post]
 
   resources :channels
   resources :discussions do
-    resources :replies
+  resources :replies
   end
 
   root 'discussions#splash'
