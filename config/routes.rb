@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # get 'home/index'
-  get '/splash' => 'discussions#splash'
+  get 'home/index'
+  # get '/splash' => 'discussions#splash'
   match 'search' => 'discussions#search', as: 'discussions_search', via: [:get, :post]
 
   resources :channels
@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     resources :replies
   end
 
-  root 'discussions#splash'
-  # root 'discussions#index'
+  # root 'discussions#splash'
+  root 'discussions#index'
 
   devise_for :users, controllers: { registrations: 'registrations' }
 end
