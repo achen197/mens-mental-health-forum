@@ -210,6 +210,15 @@ a {
   padding: 0 2rem;
 }
 
+.error-btn {
+  background: #e50000;
+
+  &:hover {
+    background:#b20000;
+  }
+}
+
+
 .search-bar {
   width: 400px;
   border: none;
