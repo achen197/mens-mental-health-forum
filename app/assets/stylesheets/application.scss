@@ -249,8 +249,8 @@ a {
 	border: none;
 	border-radius: 3px;
 	background: #f0f0f0;
-	color: #aaa;
-	font-weight: bold;
+	color: #555;
+	font-weight: normal;
   -webkit-appearance: none; /* for box shadows to show on iOS */
   box-shadow: none;
 }
@@ -416,6 +416,8 @@ a {
   background-color: none;
   background-clip: border-box;
   border-radius: 15px;
+  border: none;
+  box-shadow: none;
 }
 
 .card-body {
