@@ -44,10 +44,6 @@ gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'gemoji'
 
-# pusher gems
-gem 'bootstrap', '~> 4.1.0'
-gem 'pusher'
-gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

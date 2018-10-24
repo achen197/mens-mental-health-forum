@@ -1,12 +1,7 @@
 class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
   before_action :find_channels, only: [:index, :show, :new, :edit]
-  before_action :authenticate_user!, except: [:index, :show, :splash, :create]
-	before_action :initialize_user
-
-  def initialize_user
-    @discussion = Discussion.new
-  end
+  before_action :authenticate_user!, except: [:index, :show]
 
 
   # GET /discussions
@@ -14,12 +9,6 @@ class DiscussionsController < ApplicationController
   def index
     @discussions = Discussion.all.order(discussion[:created_at].desc)
   end
-
-	def splash
-		 @comments = Comment.all
-    @comment = Comment.new # add this line
-		@channels = Channel.all
-	end
 
   # GET /discussions/1
   # GET /discussions/1.json
