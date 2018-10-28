@@ -4,8 +4,8 @@
 
 .header-title {
   font-size: 3rem;
-  line-height: 3.75rem;
-  margin-top: 10rem;
+  line-height: 3.75rem !important;
+  margin-top: 8rem;
 }
 
 .title-accent-blue {
@@ -14,4 +14,9 @@
 
 .splash-header-img img {
   max-width: 70%;
+}
+
+.cta-btn {
+  padding: 1.5rem 3rem !important;
+  font-size: 1rem !important;
 }

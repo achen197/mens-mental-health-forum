@@ -27,7 +27,7 @@
     <% end %>
      <nav class="navbar main-nav" role="navigation" aria-label="main navigation">
       <div class="navbar-brand logo-img">
-        <%= link_to root_path do %>
+        <%= link_to discussions_path do %>
           <h1 class="title is-5">let's talk.</h1>
         <% end  %>
       <div class="navbar-burger burger" data-target="navbar">
@@ -39,12 +39,12 @@
 
       <div id="navbar" class="navbar-menu">
         <div class="navbar-end">
-          <div class="navbar-item">
+          <% if user_signed_in? %>
+            <div class="navbar-item">
           <%= form_tag(discussions_search_path method: :post) do %>
             <%= text_field_tag :text, params[:text], placeholder: "Search...", class: 'search-bar'%>
           <% end %>
           </div>
-          <% if user_signed_in? %>
           <div class="navbar-item">
             <div class="field is-grouped">
               <%= link_to 'New Discussion', new_discussion_path, class:"button discussion-btn" %>
@@ -61,13 +61,12 @@
          <div class="navbar-item">
           <div class="field is-grouped">
 
-
-            <p class="control">
-              <%= link_to "Login", new_user_session_path, class: "login-btn"%>
+          <p class="control">
+              <%= link_to "Register", new_user_registration_path, class: "button primary-btn" %>
             </p>
 
             <p class="control">
-              <%= link_to "Register", new_user_registration_path, class: "register-btn" %>
+              <%= link_to "Login", new_user_session_path, class: "login-btn"%>
             </p>
 
           </div>
