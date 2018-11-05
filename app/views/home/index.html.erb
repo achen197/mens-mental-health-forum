@@ -1,59 +1,77 @@
 <div class="splash-page">
+		<%# <div class="morph-wrap">
+				<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+					<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+				</svg>
+			</div> %>
   <div class="columns">
-    <div class="column is-5">
-      <h3 class="title is-2 header-title">Our culture doesn’t always leave space for men to express their internal struggle. Let’s change that. <span class="title-accent-blue">Let's Talk.</h3>
-      <h3 class="title is-4 header-subtitle">Welcome to a community that empowers others through free speech.</h3>
+    <div class="column is-6">
+      <h3 class="title is-2 header-title">Our culture doesn’t always leave space for men to express their internal struggle. <br/>
+      <br/>Let’s change that. <span class="title-accent-blue">Let's Talk.</h3>
+      <%# <h3 class="title is-4 header-subtitle">Welcome to a community that empowers others through free speech. </h3> %>
         <p class="control">
-          <%= link_to "Join The Discussion 💬", new_user_registration_path, class: "button primary-btn cta-btn" %>
+          <%= link_to "Join The Discussion", new_user_registration_path, class: "button primary-btn-outline cta-btn" %>
         </p>
     </div>
-    <div class="column is-7">
+    <div class="column is-6">
         <div class="login-logo">
         <%= image_tag("culture.png", :alt => "rss feed") %>
         </div>
     </div>
   </div>
 
-      <div class="columns">
-<div class="column is-6 home-half">
-           <div class="login-logo">
-        <%= image_tag("open-feelings-04.png", :alt => "rss feed") %>
-      </div>
-</div>
-<div class="column is-6 home-half">
-<p class="home-story">Let’s talk is a safe space where men are able to openly discuss their feelings and empower others to do the same and eventually destroying the ‘feminine’ connotation about opening up about their feelings. </p>
-</div>
-  </div>
-  <div class="columns">
-<div class="column is-6 home-half">
-           <div class="login-logo">
-        <%= image_tag("letstalk-logo.png", :alt => "rss feed") %>
-      </div>
-</div>
- <div class="column is-6 home-half">
-<p class="home-story">We get it, talking about it with anyone can be scary and hard. Men tend to bottle things up and avoid talking about the issue. It’s the silent crisis. You’ve been told all your life that you just need to “harden up” or “man up”.</p>
-</div>
-  </div>
-    <div class="columns">
-      <div class="column is-6 home-half">
-<p class="home-story">Actively seeking help can seem to go against cultural expectations as it’s “not manly to have feelings”. Majority of men are taught this from a very early age, that it’s not manly to cry and you have to toughen up and crack on. </p>
-</div>
-<div class="column is-6 home-half">
-           <div class="login-logo">
-        <%= image_tag("letstalk-logo.png", :alt => "rss feed") %>
-      </div>
-</div>
+  <div class="section-one section-container">
 
+    <div class="world">
+      <div class="land"></div>
+      <div class="land"></div>
+      <div class="land"></div>
+      <div class="land"></div>
+      <div class="land"></div>
+      <div class="land"></div>
+      <div class="land"></div>
+      <div class="land"></div>
+      <div class="land"></div>
+    </div>
+    <div class="clouds">
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+    </div>
+
+    <div class="title is-4">
+      <h2 class="text-center"><span class="bold-text">Suicide</span> is the leading cause of death for men aged bewteen 11 - 44.</h2>
+    </div>
   </div>
 
-      <div class="columns">
-<div class="column is-6 home-half">
-           <div class="login-logo">
-        <%= image_tag("letstalk-logo.png", :alt => "rss feed") %>
-      </div>
+     <div class="section-two section-container">
+   <div id=word-container>
+  1 in
+  <div id=flip>
+  <div><div>2</div></div>
+    <div><div>5</div></div>
+    <div><div>8</div></div>
+  </div>
+  Men will experience
+    <div id=flip>
+    <div><div>mental health problems at some point in their lives</div></div>
+    <div><div>anxiety</div></div>
+    <div><div>depression</div></div>
+  </div>
 </div>
-      <div class="column is-6 home-half">
-<p class="home-story">We cannot stress enough how important it is to speak up and fight stigma. The aim of let’s talk is, as more men speak out about their struggles and experiences with mental health, other men will not feel as alone. Continuing to spread this awareness and normalise the fact that it can be hard to manage everyday demands will. You are not alone.</p>
-</div>
+  </div>
+
+
+  <div class="section-three section-container">
+    <div class="title is-2">
+      <h2 class="text-center">Suicide is the leading cause of death for men aged bewteen 11 - 44.</h2>
+    </div>
+  </div>
 
 </div>

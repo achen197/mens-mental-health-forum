@@ -23,8 +23,8 @@
 }
 
 .cta-btn {
-  padding: 1.5rem 3rem !important;
-  font-size: 1rem !important;
+  padding: 1.5rem 2rem !important;
+  font-size: 0.875rem !important;
 }
 
 .home-story {
@@ -35,4 +35,100 @@
 .home-half {
   display: flex !important;
   align-items: center !important;
+}
+
+
+//demo stuff
+
+#word-container {
+  text-transform: uppercase;
+  font-size:2rem;
+  font-weight:bold;
+  width:100%;
+  display:block;
+  text-align: center;
+  color: white;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 10s linear infinite
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+//the world
+
+
+.world {
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	background: #7BAECB;
+	position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	overflow:hidden;
+}
+
+.land {
+	position: absolute;
+	height:20px;
+	background:#99CC99;
+	border-radius: 150px;
+}
+
+.clouds {
+	width: 170px;
+	height: 170px;
+	border-radius: 200px;
+	position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	overflow:hidden;
+}
+
+.cloud {
+	width:20px;
+	height:10px;
+	background:white;
+	border-radius:20px;
+}
+
+.section-container {
+  height: 60vh;
+  padding: 15rem 0;
 }
