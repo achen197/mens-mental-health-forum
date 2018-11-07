@@ -172,45 +172,38 @@ setTimeout( function() {
 
 
 
-//world
+//sad cloud
 
-var land = document.querySelectorAll('.land');
-var cloud = document.querySelectorAll('.cloud');
+const happy = document.getElementById('happy')
+const sad = document.getElementById('sad')
+const cloud = document.querySelector('.cloud')
+const mouth = document.querySelector('.mouth')
+const radio = document.querySelector('.fake-radio')
 
-
-
-for (var i = 0; i < land.length; i++) {
-	land[i].style.transform = 'translate(' + Math.round(Math.random() * 150) + 'px, ' + Math.round(Math.random() * 150) + 'px)';
-	land[i].style.width = Math.round(Math.random() * 50) + 50 + 'px';
+function makeHappy () {
+  cloud.classList.remove('is-sad')
+  cloud.classList.add('is-happy')
+  mouth.setAttribute('d', 'M92 70 C 95 75, 105 75, 107 70')
+}
+function makeSad () {
+  cloud.classList.remove('is-happy')
+  cloud.classList.add('is-sad')
+  mouth.setAttribute('d', 'M95 72 C 95 72, 105 72, 105 72')
 }
 
-for (var i = 0; i < cloud.length; i++) {
-	cloud[i].style.transform = 'translate(' + Math.round(Math.random() * 150) + 'px, ' + Math.round(Math.random() * 150) + 'px)';
-	cloud[i].style.width = Math.round(Math.random() * 25) + 25 + 'px';
-}
-
-
-requestAnimationFrame(animate);
-
-function animate() {
-	for (var i = 0; i < land.length; i++) {
-		move(land[i]);
-		move(cloud[i]);
-	}
-
-	requestAnimationFrame(animate);
-}
-
-function move(el) {
-	var s = el.style.transform.split('(')[1].split(',');
-	var x = s[0].split('px')[0];
-	var y = s[1];
-	var w = el.style.width.split('px')[0];
-
-	var nx = parseInt(x) - 1;
-
-	if (nx + parseInt(w) < -20) {
-		nx = 170;
-	}
-	el.style.transform = 'translate(' + nx + 'px, ' + y;
-}
+happy.addEventListener('click', e => {
+  makeHappy()
+})
+sad.addEventListener('click', e => {
+  makeSad()
+})
+radio.addEventListener('click', e => {
+  if (happy.checked) {
+    sad.checked = true
+    makeSad()
+  }
+  else {
+    happy.checked = true
+    makeHappy()
+  }
+})

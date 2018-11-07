@@ -21,6 +21,8 @@ body {
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
   background: #132028;
+  overflow: hidden;
+  color: #FFF;
 }
 
 .container {
@@ -29,7 +31,7 @@ body {
 }
 
 a {
-  color: #286fbf;
+  color: #ffb631;
   font-weight: 700;
 }
 
@@ -38,10 +40,13 @@ a {
 }
 
 .main-nav {
-  background: white;
   background: #132028;
   // border-bottom: 2px solid #f5f5f5;
   height: 5rem;
+}
+
+.navbar-link {
+  color: #ffb631;
 }
 
 .field.is-grouped > .control:not(:last-child) {
@@ -89,22 +94,22 @@ a {
 
 .discussion-btn {
   border-radius: 55px !important;
-  background: #1FA2FF;
+  background: orange;
   border: none;
   color: white;
   padding: 10px 25px;
 }
 
 .discussion-btn:hover {
-  background: #1672b3;
+  background: #ffb631;
   transition: 0.2s;
   color: white;
 }
 
 .posted-ago p {
   font-size: 0.9rem;
-  color: #7e7e7e;
-  font-weight: 300;
+  color: #fff;;
+  font-weight: 400;
   line-height: 1.8rem;
 }
 
@@ -115,7 +120,7 @@ a {
 .register-btn, .login-btn {
   border: none;
   font-size: 0.825rem;
-  color: #555;
+  color: #fff;
   display: flex;
   padding-top: 0.425rem;
 }
@@ -125,7 +130,8 @@ a {
 }
 
 .register-btn:hover, .login-btn:hover {
-  border-bottom: 2px solid #1FA2FF;
+  color: #fff;
+  border-bottom: 2px solid orange;
 }
 
 .channel-btn {
@@ -141,7 +147,7 @@ a {
 }
 
 .discussion-container {
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid #303a40;
   padding: 1rem;
   margin-bottom: 1rem !important;
   .discussions-channel {
@@ -189,11 +195,11 @@ a {
   }
   .login-form, .login-logo {
     display: block;
-    margin-left: 40%;
+    margin-left: 25%;
   }
   .login-logo img {
     max-width: 65%;
-    margin-left: 20%;
+    margin-left: 5%;
     margin-bottom: 1rem;
   }
 }
@@ -204,7 +210,7 @@ a {
 
 .primary-btn, .primary-btn-outline {
   border-radius: 55px !important;
-  background: #1FA2FF;
+  background: orange;
   border: none;
   color: white;
   font-weight: 700;
@@ -218,17 +224,17 @@ a {
 }
 
 .primary-btn:hover {
-  background: #1672b3;
+  background: #ffb631;
   transition: 0.2s;
   color: white;
 }
 
 .primary-btn, .long {
-  padding: 0 10rem;
+  padding: 0 10rem !important;
 }
 
 .primary-btn, .short {
-  padding: 0 2rem;
+  padding: 0 2rem !important;
 }
 
 .search-bar {
@@ -311,9 +317,9 @@ a {
 .password-control {
   a {
     float: right;
-    padding-right: 10%;
+    padding-right: 20%;
     font-size: 0.75rem;
-    color: #555;
+    color: #fff;
     font-weight: 300;
     padding-top: 0.35rem;
   }
@@ -452,6 +458,10 @@ a {
   margin-bottom: 0.75rem;
   line-height: 34px;
   color: white;
+  span {
+    background: orange;
+    padding: 3px;
+  }
 }
 
 .card-subtitle {
@@ -484,4 +494,7 @@ a {
   padding-left: 10px;
 }
 
-//Home
+.label, .control .hint {
+  color: #fff;
+}
+

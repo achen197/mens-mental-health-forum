@@ -16,7 +16,7 @@
 }
 
 .title-accent-blue {
-  color: #1FA2FF;
+  color: orange;
 }
 
 .splash-header-img img {
@@ -43,23 +43,23 @@
 
 #word-container {
   text-transform: uppercase;
-  font-size:2rem;
-  font-weight:bold;
+  font-size: 2.8rem;
+  font-weight: bold;
   width:100%;
   display:block;
   color: white;
 }
 
 #flip {
-  height:50px;
+  height:80px;
   overflow:hidden;
 }
 
 #flip > div > div {
   color:#fff;
-  padding:4px 12px;
-  height:45px;
-  margin-bottom:45px;
+  padding: 4px 12px;
+  height: 70px;
+  margin-bottom: 30px;
   display:inline-block;
 }
 
@@ -472,4 +472,128 @@ Bounce
 .section-container {
   height: 60vh;
   padding: 15rem 0;
+}
+
+.sad-cloud {
+  display: block;
+  margin: 0 auto;
+}
+
+.cloud {
+  height: 200px;
+  width: 200px;
+  transition-duration: .5s;
+  transition-property: transform;
+  background: none;
+  display: block;
+  margin: 0 auto;
+  &.is-sad {
+    transform: translateY(5px);
+  }
+}
+
+.puff {
+  fill: white;
+}
+
+.shadow {
+  fill: rgba(220,220,220,.25);
+}
+
+.puff,
+.shadow {
+  .is-sad & {
+    transition-duration: .5s;
+    transition-property: transform;
+    ellipse {
+      transform: translateY(3px);
+    }
+  }
+}
+
+.eyelid {
+  fill: white;
+  transition-duration: .5s;
+  transition-property: transform;
+}
+
+.eyelid--left {
+  .is-sad & {
+    transform: translate(1px, 5px);
+  }
+}
+
+.eyelid--right {
+  .is-sad & {
+    transform: translate(-1px, 5px);
+  }
+}
+
+.mouth {
+  fill: transparent;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+// .label {
+//   transition-duration: .5s;
+//   transition-property: opacity;
+//   color: white;
+//   input:not(:checked) + & {
+//     opacity: .5;
+//   }
+//   &#{&}:hover,
+//   &#{&}:focus {
+//     opacity: 1;
+//   }
+//   &:last-of-type {
+//     order: 1;
+//   }
+// }
+
+// input {
+//   order: 0;
+//   clip: rect(0 0 0 0);
+//   height: 1px;
+//   margin: -1px;
+//   overflow: hidden;
+//   padding: 0;
+//   position: absolute;
+//   width: 1px;
+//   white-space: nowrap;
+// }
+
+// #happy-sad-cloud {
+//   align-items: center;
+//   display: flex;
+// }
+
+.fake-radio {
+  background-color: rgba(220,220,220,.5);
+  border: 2px solid rgba(220,220,220,.5);
+  border-radius: calc(1em + 3px);
+  cursor: pointer;
+  display: inline-flex;
+  height: 20px;
+  margin-right: 1em;
+  margin-left: 1em;
+  position: relative;
+  width: 40px;
+  &:after {
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+    height: 24px;
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    transition-duration: .5s;
+    transition-property: transform;
+    width: 24px;
+  }
+  #sad:checked + label + &:after {
+    transform: translateX(20px);
+  }
 }
