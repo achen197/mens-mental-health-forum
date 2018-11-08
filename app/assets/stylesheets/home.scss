@@ -16,7 +16,7 @@
 }
 
 .title-accent-blue {
-  color: orange;
+  color: #ec7d0a;
 }
 
 .splash-header-img img {
@@ -191,7 +191,7 @@ Chat
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  top: 55%;
+  top: 60%;
   right: -5rem;
   transform: translate(-50%, -50%);
 }
@@ -470,7 +470,7 @@ Bounce
 
 
 .section-container {
-  height: 60vh;
+  height: 55vh;
   padding: 15rem 0;
 }
 
@@ -597,3 +597,25 @@ Bounce
     transform: translateX(20px);
   }
 }
+
+.counter-title {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 400;
+  p {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    opacity: 0.4;
+  }
+
+  .counter-box-text {
+    display: inline-flex;
+  }
+
+  .counter-million {
+    margin-left: 1rem;
+  }
+}
+
+

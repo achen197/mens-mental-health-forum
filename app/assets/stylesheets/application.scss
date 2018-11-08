@@ -31,7 +31,7 @@ body {
 }
 
 a {
-  color: #ffb631;
+  color: #ec7d0a;
   font-weight: 700;
 }
 
@@ -45,8 +45,47 @@ a {
   height: 5rem;
 }
 
+.notification {
+  background: none;
+}
+
+.navbar-dropdown {
+  background: #20292D;
+  border-top: 1px solid #20292D;
+  .navbar-item {
+    color: white;
+    &:hover {
+      color: #2b3438;
+    }
+  }
+}
+
+a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
+  background: pink;
+}
+
+.navbar-end {
+  .navbar-link {
+    color: white;
+  }
+}
+
+.navbar-item .has-dropdown .is-hoverable {
+  background: none;
+  &:hover {
+    background: none;
+  }
+}
+
 .navbar-link {
-  color: #ffb631;
+  color: #ec7d0a;
+
+  &:after {
+    color: #ec7d0a;
+  }
+  &:hover {
+    color: white;
+  }
 }
 
 .field.is-grouped > .control:not(:last-child) {
@@ -94,7 +133,7 @@ a {
 
 .discussion-btn {
   border-radius: 55px !important;
-  background: orange;
+  background: #ec7d0a;
   border: none;
   color: white;
   padding: 10px 25px;
@@ -131,7 +170,7 @@ a {
 
 .register-btn:hover, .login-btn:hover {
   color: #fff;
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid #ec7d0a;
 }
 
 .channel-btn {
@@ -155,7 +194,7 @@ a {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    color: orange;
+    color: #ec7d0a;
   }
   h3 {
     padding-top: 0.25rem;
@@ -172,7 +211,7 @@ a {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    color: orange;
+    color: #ec7d0a;
   }
 }
 }
@@ -210,7 +249,7 @@ a {
 
 .primary-btn, .primary-btn-outline {
   border-radius: 55px !important;
-  background: orange;
+  background: #ec7d0a;
   border: none;
   color: white;
   font-weight: 700;
@@ -348,7 +387,7 @@ a {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    color: orange;
+    color: #ec7d0a;
   }
 }
 }
@@ -459,7 +498,7 @@ a {
   line-height: 34px;
   color: white;
   span {
-    background: orange;
+    background: #ec7d0a;
     padding: 3px;
   }
 }
