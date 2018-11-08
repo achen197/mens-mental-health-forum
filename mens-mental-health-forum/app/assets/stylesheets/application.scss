@@ -1,0 +1,462 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bulma";
+@import "functions";
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: #286fbf;
+  font-weight: 700;
+}
+
+.main-nav {
+  background: white;
+  border-bottom: 2px solid #f5f5f5;
+  height: 4.25rem;
+}
+
+.field.is-grouped > .control:not(:last-child) {
+  margin-right: 1.75rem;
+}
+
+.logo-img {
+  padding: 1.5rem 2rem;
+  .title .is-5 {
+    font-size: 1.8rem;
+  }
+}
+
+.image {
+  border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.textarea {
+  height: 150px;
+  font-size: .9rem;
+  padding: 1rem;
+}
+
+.textarea-lg {
+  height: 300px;
+  font-size: .9rem;
+  padding: 1rem;
+}
+
+.discussion-title {
+  margin-bottom: 0;
+  line-height: 3.5rem;
+}
+
+.button {
+  font-size: 0.825rem;
+}
+
+.discussion-btn {
+  border-radius: 55px !important;
+  background: #1FA2FF;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+}
+
+.discussion-btn:hover {
+  background: #1672b3;
+  transition: 0.2s;
+  color: white;
+}
+
+.posted-ago p {
+  font-size: 0.9rem;
+  color: #7e7e7e;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+
+.content p:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.register-btn, .login-btn {
+  border: none;
+  font-size: 0.825rem;
+  color: #555;
+  display: flex;
+  padding-top: 0.425rem;
+  padding-top: rem;
+}
+
+.register-btn:hover, .login-btn:hover {
+  border-bottom: 2px solid #1FA2FF;
+}
+
+.channel-btn {
+  margin-bottom: 1rem;
+  border-radius: 55px;
+}
+
+.field {
+  .material-icons {
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+  }
+}
+
+.discussion-container {
+  border-bottom: 1px solid #f4f4f4;
+  padding: 1rem;
+  margin-bottom: 1rem !important;
+  .discussions-channel {
+    a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: orange;
+  }
+  h3 {
+    padding-top: 0.25rem;
+  }
+  .title {
+    line-height: 28px;
+  }
+}
+}
+
+.single-discussion {
+  .discussion-channel, .discussion-article {
+    .discussion-tite a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: orange;
+  }
+}
+}
+
+.topic-list li a {
+  line-height: 40px;
+}
+
+.disucssion-content p{
+  color: green;
+  font-size: 0.825rem;
+}
+
+.login-container, .register-container {
+  display: inline-flex;
+  max-width: 100%;
+  width: 100%;
+  .login-img, .register-img {
+    padding: 0;
+  }
+  .login-form, .login-logo {
+    display: block;
+    margin-left: 40%;
+  }
+  .login-logo img {
+    max-width: 65%;
+    margin-left: 20%;
+    margin-bottom: 1rem;
+  }
+}
+
+.section-register {
+  padding: 1rem 0.5rem;
+}
+
+.primary-btn {
+  border-radius: 55px !important;
+  background: #1FA2FF;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+.primary-btn:hover {
+  background: #1672b3;
+  transition: 0.2s;
+  color: white;
+}
+
+.primary-btn, .long {
+  padding: 0 10rem;
+}
+
+.primary-btn, .short {
+  padding: 0 2rem;
+}
+
+.search-bar {
+  width: 400px;
+  border: none;
+  background:#f0f0f0;
+  border-radius: 15px;
+  padding: 0.5rem 0.8rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #aaa;
+  margin-right: 3rem;
+}
+
+.control label .boolean {
+  margin: 1.825rem 0.5rem 0.5rem 0;
+  display: inline-flex;
+}
+
+.input, .input-reg {
+	z-index: 1;
+	display: inline-block;
+	max-width: 350px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+
+.input-reg {
+  max-width: 365px;
+}
+
+.input__field, .input__field__full {
+	position: relative;
+	display: block;
+	padding: 0.8em;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: bold;
+  -webkit-appearance: none; /* for box shadows to show on iOS */
+  box-shadow: none;
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #6a7989;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.login-form-btn {
+  width: 80%;
+  margin-top: 3.5rem;
+  .primary-btn {
+    display: block;
+    margin: 0 auto;
+    height: 2.5rem;
+  }
+}
+
+.password-control {
+  a {
+    float: right;
+    padding-right: 10%;
+    font-size: 0.75rem;
+    color: #555;
+    font-weight: 300;
+    padding-top: 0.35rem;
+  }
+}
+
+.control .hint {
+  padding-right: 10%;
+  font-size: 0.75rem;
+  color: #555;
+  font-weight: 300;
+  padding-top: 0.35rem;
+}
+
+//Individual Discussion
+
+.single-discussion {
+  .title:not(.is-spaced) + .subtitle {
+    font-weight: 300;
+    padding-top: 1rem;
+  }
+  p {
+    line-height: 2rem;
+  }
+  .disucssion-channel {
+    a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: orange;
+  }
+}
+}
+
+.discussions-author {
+  display: inline-flex;
+  h4 {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+}
+
+//Discover Section
+
+.discover-articles {
+  margin-bottom: 3rem;
+}
+
+.article-cards {
+  display: inline-flex;
+  .single-card {
+    h2 {
+      position: relative;
+    }
+  }
+}
+
+.single-card {
+  margin: 0 1rem;
+  border-radius: 15px;
+  width: 250px !important;
+  height: 325px;
+  // padding: 1rem;
+
+}
+
+//Bootstrap Card SCSS
+
+// Card image
+.card-container {
+  display: inline-flex;
+}
+
+.last-card {
+  margin-left: 1.5rem;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+}
+
+.card-img {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  border-radius: 15px;
+}
+
+.card-overlay {
+  background: pink;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+}
+// Card image caps
+.card-img-top {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  border-radius: 15px;
+}
+
+.card-img-bottom {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+}
+
+//
+// Base styles
+//
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: none;
+  background-clip: border-box;
+  border-radius: 15px;
+}
+
+.card-body {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+  line-height: 34px;
+  color: white;
+}
+
+.card-subtitle {
+  margin-top: -0.375rem;;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link:hover {
+    text-decoration: none;
+    .card-link:hover {
+      margin-left: 1.25rem;
+    }
+  }
+
+.discover-source {
+  display:inline-flex;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.discover-author {
+  color: white;
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-left: 10px;
+}

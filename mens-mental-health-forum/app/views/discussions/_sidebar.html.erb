@@ -1,0 +1,16 @@
+<div class="column is-3 is-offset-1">
+  <h3 class="title is-5">Topics
+  <% if has_role?(:admin) %>
+  <%= link_to 'Create Topic', new_channel_path, class:'button channel-btn' %>
+  <% end %>
+</h3>
+
+  <ul class="list topic-list">
+    <% @channels.each do |c| %>
+    <li class="discussions-channel"><%= link_to c.channel, c %></li>
+    <% end %>
+  </ul>
+
+  <hr>
+
+</div>

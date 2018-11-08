@@ -1,0 +1,44 @@
+<div class="columns single-discussion">
+  <div class="column discussion-channel discussion-article is-8">
+   <%= link_to @discussion.channel.channel, @discussion.channel, :class => "discussion-title" %>
+    <h1 class="title is-2 discussion-title"><%= @discussion.title %></h1>
+    <div class="discussions-author">
+      <figure class="image is-48x48">
+        <%= gravatar_image_tag(@discussion.user.email, class: 'border-radius-50', size: 48, alt: @discussion.user.username) %>
+      </figure>
+    <h4 class="single-disucssions-author">by <%= @discussion.user.username %></h4>
+      </div>
+    <div class="level">
+      <div class="level-left"></div>
+      <div class="level-right">
+        <% if discussion_author(@discussion) %>
+        <div class="buttons">
+            <%= link_to 'Edit Discussion', edit_discussion_path(@discussion), class:'button'%>
+            <%= link_to 'Delete', discussion_path(@discussion), method: :delete, data: { confirm: "Delete discussion?" }, class:'button' %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="content"><%= markdown(@discussion.content) %></div>
+
+    <h3 class="subtitle is-5 has-text-grey"><%= pluralize(@discussion.replies.count, "Comment") %></h3>
+
+    <div id="discussion-replies">
+      <%= render @discussion.replies %>
+    </div>
+
+    <hr />
+
+    <h3 class="subtitle is-3 has-text-grey">Leave a comment</h3>
+    <% if user_signed_in? %>
+      <%= render 'replies/form' %>
+    <% else %>
+    <p><%= link_to 'Login', new_user_session_path %> to leave a comment. Don't have an account?
+      <%= link_to 'Register', new_user_registration_path %> for one.</p>
+    <% end %>
+
+  </div>
+
+  <%= render 'sidebar' %>
+
+</div>
