@@ -208,3 +208,9 @@ $spacing-100: 100px;
 .mh80  { margin-left: $spacing-80; margin-right: $spacing-80; }
 .mh90  { margin-left: $spacing-90; margin-right: $spacing-90; }
 .mh100 { margin-left: $spacing-100;margin-right: $spacing-100;  }
+
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.bold-text {font-weight: 700 !important; }
+

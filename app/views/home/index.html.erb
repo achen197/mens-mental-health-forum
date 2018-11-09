@@ -1,2 +1,142 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="splash-page">
+  <div class="columns mt40">
+    <div class="column is-6" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+      <h3 class="title is-1 header-title">Our culture doesn’t always leave space for men to express their internal struggle.</h3>
+      <h3 class="title is-2 mt50 mb50">Let’s change that. Let's talk</h3>
+        <p class="control">
+          <%= link_to "Join The Discussion", new_user_registration_path, class: "button primary-btn cta-btn mt20" %>
+        </p>
+    </div>
+    <div class="column is-6" data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">
+        <div class="login-logo">
+        <%= image_tag("test.png", :alt => "rss feed") %>
+        </div>
+    </div>
+  </div>
+
+<div class="section-container">
+  <div class="title is-1">
+    <h3 class="text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">We've all probably felt pretty sh*t in some point of our lives</h3>
+  </div>
+
+<div class="sad-cloud" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
+<svg class="cloud" viewBox="0 0 200 100">
+  <g class="shadow">
+    <ellipse cx="105" cy="30" rx="35" ry="30" />
+    <rect x="30" y="20" width="150" height="90" rx="50" ry="50" />
+  </g>
+  <g class="puff">
+    <ellipse cx="100" cy="25" rx="35" ry="30" />
+    <rect x="25" y="15" width="150" height="90" rx="50" ry="50" />
+  </g>
+  <circle class="eye" cx="60" cy="60" r="5" />
+  <circle class="eyelid eyelid--left" cx="57" cy="46" r="7" />
+  <circle class="eye" cx="140" cy="60" r="5" />
+  <circle class="eyelid eyelid--right" cx="143" cy="46" r="7" />
+  <path class="mouth" d="M92 70 C 95 75, 105 75, 107 70" />
+</svg>
+
+<%# <form id="happy-sad-cloud">
+  <input type="radio" id="happy" name="mood" checked>
+  <label class="label" for="happy">Happy!</label>
+  <input type="radio" id="sad" name="mood">
+  <label class="label" for="sad">Sad</label>
+  <span class="fake-radio"></span>
+</form> %>
+
+</div>
+
+</div>
+
+  <div class="section-one section-container">
+<div class="columns">
+  <div class="column is-7" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+    <div class="title is-2 pt40">
+      <h2 class="text-left"><span class="bold-text">And we get it.</span> Talking about it with anyone can be scary and hard.</h2>
+    </div>
+    <div class="title is-4">
+      <h3 class="mt50"><span class="bold-text">But it doesn't have to be.</span> Have a go and chat with our good mate Jake
+      </h4>
+      <%= image_tag("thiccarrow-04.png", :class => "chat-arrow", :alt => "arrow") %>
+    </div>
+  </div>
+  <div class="column is-5" data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">
+    <div class="chat">
+      <div class="chat-title">
+        <h1>Jake Smith</h1>
+        <h2>A Mate</h2>
+        <figure class="avatar">
+          <img src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=29a17c0d14e2ef6c46b93628fa033371&auto=format&fit=crop&w=1000&q=80" /></figure>
+      </div>
+      <div class="messages">
+        <div class="messages-content"></div>
+      </div>
+      <div class="message-box">
+        <textarea type="text" class="message-input" placeholder="Type your message here..."></textarea>
+        <button type="submit" class="message-submit">Send</button>
+      </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+  <div class="section-three section-container">
+    <div class="columns">
+      <div class="column is-12">
+        <div class="animated-world" data-aos="fade-up" data-aos-duration="300">
+          <div class="world" >
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+          </div>
+          <div class="clouds">
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+          </div>
+        </div>
+        <div class="counter-title mt100">
+          <div class="counter-box-text mb10" data-aos="fade-up" data-aos-duration="300">
+            <div id="counter">
+              <div class="counter-value" data-count="450">0</div>
+            </div>
+            <span class="counter-million">MILLION</span>
+            </div>
+          <p data-aos="fade-up" data-aos-duration="500">PEOPLE AROUND THE WORLD SUFFER FROM <span data-aos="fade-up" data-delay="1000">MENTAL ILLNESS</span></p>
+        </div>
+      </div>
+
+       <%# <div class="column is-5">
+         <div id=word-container>
+          1 in
+          <div id=flip>
+          <div><div>2</div></div>
+            <div><div>5</div></div>
+            <div><div>8</div></div>
+          </div>
+          Men will experience
+            <div id=flip>
+            <div><div>mental health problems</div></div>
+            <div><div>anxiety</div></div>
+            <div><div>depression</div></div>
+          </div>
+      </div> %>
+
+    </div>
+  </div>
+
+
+
+</div>

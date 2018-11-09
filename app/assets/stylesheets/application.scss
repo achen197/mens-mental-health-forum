@@ -17,20 +17,90 @@
 @import "bulma";
 @import "functions";
 
+html {
+  background: none;
+}
+
 body {
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
+  background: #132028;
+  overflow: hidden;
+  color: #FFF;
+}
+
+.container {
+  max-width: 1480px;
+  width: 100%;
+}
+
+abbr[title], acronym[title] {
+  text-decoration: none;
+  color: #bd0606;
 }
 
 a {
-  color: #286fbf;
+  color: #ec7d0a;
   font-weight: 700;
 }
 
+.title {
+  color: #fff;
+}
+
 .main-nav {
-  background: white;
-  border-bottom: 2px solid #f5f5f5;
-  height: 4.25rem;
+  background: #132028;
+  // border-bottom: 2px solid #f5f5f5;
+  height: 5rem;
+}
+
+.notification {
+  background: none;
+}
+
+.navbar-dropdown {
+  background: #20292D;
+  border-top: 1px solid #20292D;
+  .navbar-item {
+    color: white;
+    &:hover {
+      color: #2b3438;
+    }
+  }
+}
+
+a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
+  background: none !important;
+}
+
+a.navbar-item {
+  &:active {
+    background: none !important;
+  }
+}
+
+.navbar-end {
+  .navbar-link {
+    color: white;
+  }
+}
+
+.navbar-item .has-dropdown .is-hoverable {
+  background: none;
+  &:hover {
+    background: none;
+  }
+}
+
+.navbar-link {
+  color: #ec7d0a;
+
+  &:after {
+    color: #ec7d0a;
+  }
+  &:hover {
+    color: white;
+  }
 }
 
 .field.is-grouped > .control:not(:last-child) {
@@ -78,22 +148,22 @@ a {
 
 .discussion-btn {
   border-radius: 55px !important;
-  background: #1FA2FF;
+  background: #ec7d0a;
   border: none;
   color: white;
   padding: 10px 25px;
 }
 
 .discussion-btn:hover {
-  background: #1672b3;
+  background: #ffb631;
   transition: 0.2s;
   color: white;
 }
 
 .posted-ago p {
   font-size: 0.9rem;
-  color: #7e7e7e;
-  font-weight: 300;
+  color: #fff;;
+  font-weight: 400;
   line-height: 1.8rem;
 }
 
@@ -104,14 +174,18 @@ a {
 .register-btn, .login-btn {
   border: none;
   font-size: 0.825rem;
-  color: #555;
+  color: #fff;
   display: flex;
   padding-top: 0.425rem;
-  padding-top: rem;
+}
+
+.login-btn {
+  margin-right: 2rem;
 }
 
 .register-btn:hover, .login-btn:hover {
-  border-bottom: 2px solid #1FA2FF;
+  color: #fff;
+  border-bottom: 2px solid #ec7d0a;
 }
 
 .channel-btn {
@@ -127,7 +201,7 @@ a {
 }
 
 .discussion-container {
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid #303a40;
   padding: 1rem;
   margin-bottom: 1rem !important;
   .discussions-channel {
@@ -135,7 +209,7 @@ a {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    color: orange;
+    color: #ec7d0a;
   }
   h3 {
     padding-top: 0.25rem;
@@ -152,13 +226,14 @@ a {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    color: orange;
+    color: #ec7d0a;
   }
 }
 }
 
 .topic-list li a {
   line-height: 40px;
+  color: white;
 }
 
 .disucssion-content p{
@@ -175,11 +250,11 @@ a {
   }
   .login-form, .login-logo {
     display: block;
-    margin-left: 40%;
+    margin-left: 25%;
   }
   .login-logo img {
     max-width: 65%;
-    margin-left: 20%;
+    margin-left: 5%;
     margin-bottom: 1rem;
   }
 }
@@ -188,26 +263,33 @@ a {
   padding: 1rem 0.5rem;
 }
 
-.primary-btn {
+.primary-btn, .primary-btn-outline {
   border-radius: 55px !important;
-  background: #1FA2FF;
+  background: #ec7d0a;
   border: none;
   color: white;
   font-weight: 700;
+  border-radius: 55px;
+}
+
+.primary-btn-outline {
+  background: #fff;
+  border: 2px solid #1FA2FF;
+  color: #555;
 }
 
 .primary-btn:hover {
-  background: #1672b3;
+  background: #ffb631;
   transition: 0.2s;
   color: white;
 }
 
 .primary-btn, .long {
-  padding: 0 10rem;
+  padding: 0 10rem !important;
 }
 
 .primary-btn, .short {
-  padding: 0 2rem;
+  padding: 0 2rem !important;
 }
 
 .search-bar {
@@ -249,8 +331,8 @@ a {
 	border: none;
 	border-radius: 3px;
 	background: #f0f0f0;
-	color: #aaa;
-	font-weight: bold;
+	color: #555;
+	font-weight: normal;
   -webkit-appearance: none; /* for box shadows to show on iOS */
   box-shadow: none;
 }
@@ -290,9 +372,9 @@ a {
 .password-control {
   a {
     float: right;
-    padding-right: 10%;
+    padding-right: 20%;
     font-size: 0.75rem;
-    color: #555;
+    color: #fff;
     font-weight: 300;
     padding-top: 0.35rem;
   }
@@ -321,7 +403,7 @@ a {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    color: orange;
+    color: #ec7d0a;
   }
 }
 }
@@ -416,6 +498,8 @@ a {
   background-color: none;
   background-clip: border-box;
   border-radius: 15px;
+  border: none;
+  box-shadow: none;
 }
 
 .card-body {
@@ -429,6 +513,10 @@ a {
   margin-bottom: 0.75rem;
   line-height: 34px;
   color: white;
+  span {
+    background: #ec7d0a;
+    padding: 3px;
+  }
 }
 
 .card-subtitle {
@@ -460,3 +548,8 @@ a {
   padding-top: 1rem;
   padding-left: 10px;
 }
+
+.label, .control .hint {
+  color: #fff;
+}
+
