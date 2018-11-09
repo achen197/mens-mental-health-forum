@@ -17,6 +17,10 @@
 @import "bulma";
 @import "functions";
 
+html {
+  background: none;
+}
+
 body {
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
@@ -28,6 +32,11 @@ body {
 .container {
   max-width: 1480px;
   width: 100%;
+}
+
+abbr[title], acronym[title] {
+  text-decoration: none;
+  color: #bd0606;
 }
 
 a {
@@ -61,7 +70,13 @@ a {
 }
 
 a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
-  background: pink;
+  background: none !important;
+}
+
+a.navbar-item {
+  &:active {
+    background: none !important;
+  }
 }
 
 .navbar-end {
@@ -218,6 +233,7 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
 
 .topic-list li a {
   line-height: 40px;
+  color: white;
 }
 
 .disucssion-content p{

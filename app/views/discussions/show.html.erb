@@ -4,7 +4,7 @@
     <h1 class="title is-2 discussion-title"><%= @discussion.title %></h1>
     <div class="discussions-author">
       <figure class="image is-48x48">
-        <%= gravatar_image_tag(@discussion.user.email, class: 'border-radius-50', size: 48, alt: @discussion.user.username) %>
+        <%# <%= gravatar_image_tag(@discussion.user.email, class: 'border-radius-50', size: 48, alt: @discussion.user.username) %> %>
       </figure>
     <h4 class="single-disucssions-author">by <%= @discussion.user.username %></h4>
       </div>

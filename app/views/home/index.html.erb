@@ -1,14 +1,8 @@
 <div class="splash-page">
-		<%# <div class="morph-wrap">
-				<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
-					<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
-				</svg>
-			</div> %>
   <div class="columns mt40">
     <div class="column is-6" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
       <h3 class="title is-1 header-title">Our culture doesn’t always leave space for men to express their internal struggle.</h3>
       <h3 class="title is-2 mt50 mb50">Let’s change that. Let's talk</h3>
-      <%# <h3 class="title is-4 header-subtitle">Welcome to a community that empowers others through free speech. </h3> %>
         <p class="control">
           <%= link_to "Join The Discussion", new_user_registration_path, class: "button primary-btn cta-btn mt20" %>
         </p>
@@ -62,8 +56,8 @@
     </div>
     <div class="title is-4">
       <h3 class="mt50"><span class="bold-text">But it doesn't have to be.</span> Have a go and chat with our good mate Jake
-      <span class="bounce">👉</span>
       </h4>
+      <%= image_tag("thiccarrow-04.png", :class => "chat-arrow", :alt => "arrow") %>
     </div>
   </div>
   <div class="column is-5" data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">
@@ -87,42 +81,61 @@
 </div>
 
   <div class="section-three section-container">
-    <div class="counter-title mt100">
-      <div class="counter-box-text mb10" data-aos="fade-up" data-aos-duration="300">
-        <div id="counter">
-          <div class="counter-value" data-count="450">0</div>
+    <div class="columns">
+      <div class="column is-12">
+        <div class="animated-world" data-aos="fade-up" data-aos-duration="300">
+          <div class="world" >
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+            <div class="land"></div>
+          </div>
+          <div class="clouds">
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+            <div class="cloud-counter"></div>
+          </div>
         </div>
-        <span class="counter-million">MILLION</span>
+        <div class="counter-title mt100">
+          <div class="counter-box-text mb10" data-aos="fade-up" data-aos-duration="300">
+            <div id="counter">
+              <div class="counter-value" data-count="450">0</div>
+            </div>
+            <span class="counter-million">MILLION</span>
+            </div>
+          <p data-aos="fade-up" data-aos-duration="500">PEOPLE AROUND THE WORLD SUFFER FROM <span data-aos="fade-up" data-delay="1000">MENTAL ILLNESS</span></p>
         </div>
-      <p data-aos="fade-up" data-aos-duration="500">PEOPLE SUFFER FROM <span data-aos="fade-up" data-delay="1000">MENTAL ILLNESS</span></p>
+      </div>
+
+       <%# <div class="column is-5">
+         <div id=word-container>
+          1 in
+          <div id=flip>
+          <div><div>2</div></div>
+            <div><div>5</div></div>
+            <div><div>8</div></div>
+          </div>
+          Men will experience
+            <div id=flip>
+            <div><div>mental health problems</div></div>
+            <div><div>anxiety</div></div>
+            <div><div>depression</div></div>
+          </div>
+      </div> %>
+
     </div>
   </div>
-
-
-  <div class="section-two section-container">
-  <div class="columns">
-    <div class="column is-12">
-    <div id=word-container>
-    1 in
-    <div id=flip>
-    <div><div>2</div></div>
-      <div><div>5</div></div>
-      <div><div>8</div></div>
-    </div>
-    Men will experience
-      <div id=flip>
-      <div><div>mental health problems</div></div>
-      <div><div>anxiety</div></div>
-      <div><div>depression</div></div>
-    </div>
-  </div>
-  </div>
-  <div class="column is-6">
-
-  </div>
-</div>
-</div>
-
 
 
 

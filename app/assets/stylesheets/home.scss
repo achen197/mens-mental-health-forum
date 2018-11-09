@@ -43,15 +43,16 @@
 
 #word-container {
   text-transform: uppercase;
-  font-size: 2.8rem;
-  font-weight: bold;
-  width:100%;
-  display:block;
+  font-size: 2.4rem;
+  font-weight: 400;
+  width: 100%;
+  display: block;
   color: white;
+  letter-spacing: 3px;
 }
 
 #flip {
-  height:80px;
+  height: 60px;
   overflow:hidden;
 }
 
@@ -90,14 +91,13 @@
 
 //the world
 
-
 .world {
 	width: 150px;
 	height: 150px;
 	border-radius: 150px;
 	background: #7BAECB;
 	position: absolute;
-  top: 45%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 	overflow:hidden;
@@ -115,13 +115,13 @@
 	height: 170px;
 	border-radius: 200px;
 	position: absolute;
-  top: 45%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 	overflow:hidden;
 }
 
-.cloud {
+.cloud-counter {
 	width:20px;
 	height:10px;
 	background:white;
@@ -191,7 +191,7 @@ Chat
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  top: 60%;
+  top: 64%;
   right: -5rem;
   transform: translate(-50%, -50%);
 }
@@ -471,7 +471,7 @@ Bounce
 
 .section-container {
   height: 55vh;
-  padding: 15rem 0;
+  margin: 8rem 0;
 }
 
 .sad-cloud {
@@ -618,4 +618,10 @@ Bounce
   }
 }
 
+.chat-arrow {
+  max-width: 20%;
+  position: absolute;
+  left: 52%;
+  top: 62.5%;
+}
 
