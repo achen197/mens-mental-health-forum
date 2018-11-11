@@ -4,9 +4,16 @@
       <h3 class="title is-1 header-title">Our culture doesn’t always leave space for men to express their internal struggle.</h3>
       <h3 class="title is-2 mt50 mb50">Let’s change that. Let's talk</h3>
         <div class="cta-container">
+        <% if user_signed_in? %>
+        <p class="control">
+          <%= link_to "Join The Discussion", discussions_path, class: "button primary-btn cta-btn mt20" %>
+        </p>
+        <% end %>
+        <% if !user_signed_in? %>
         <p class="control">
           <%= link_to "Join The Discussion", new_user_registration_path, class: "button primary-btn cta-btn mt20" %>
         </p>
+        <% end %>
          <p class="control ml20">
           <a href="#about" class="button primary-btn cta-btn cta-btn-outline mt20">About Us</a>
         </p>
@@ -126,12 +133,28 @@
           <p data-aos="fade-up" data-aos-duration="500">PEOPLE AROUND THE WORLD SUFFER FROM <span data-aos="fade-up" data-delay="1000">MENTAL ILLNESS</span></p>
         </div>
       </div>
+
     </div>
 
       <div class="section-container">
     <div class="empower">
-      <h3 class="title is-3">You're never alone. Join the community.</h3>
+      <h3 class="title is-3 text-center">You're never alone. Join the community.</h3>
+      <%= image_tag("lets-talkgood.gif", :alt => "People talking") %>
+      <% if user_signed_in? %>
+      <div class="footer-cta">
+        <%= link_to "Let's Talk", discussions_path, class: "button primary-btn big-btn" %>
+      </div>
+      <% end %>
+      <% if !user_signed_in? %>
+      <div class="footer-cta">
+        <%= link_to "Let's Talk", new_user_registration_path, class: "button primary-btn big-btn" %>
+      </div>
+      <% end %>
     </div>
+  </div>
+
+
+
   </div>
   </div>
 

@@ -328,7 +328,16 @@ a.navbar-item {
   }
 }
 
+.big-btn {
+  padding: 1.5rem 3rem;
+  font-size: 1.4rem;
+}
 
+.footer-cta {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 
 .search-bar {
   width: 400px;
@@ -341,7 +350,6 @@ a.navbar-item {
   font-weight: 700;
   letter-spacing: 0.8px;
   color: #aaa;
-  margin-right: 3rem;
 }
 
 .control label .boolean {

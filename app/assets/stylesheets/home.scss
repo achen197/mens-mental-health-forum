@@ -28,7 +28,7 @@
   line-height: 36px;
   letter-spacing: 0.5px;
   font-weight: 400;
-  color: #BBB;
+  color: #d8d8d8;
 }
 
 .home-story {
@@ -132,6 +132,13 @@
 	height:10px;
 	background:white;
 	border-radius:20px;
+}
+
+.empower {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 //Chat
@@ -471,7 +478,6 @@ Bounce
     transform: translateY(-10px);
   }
 }
-
 
 .section-container {
   height: 55vh;
