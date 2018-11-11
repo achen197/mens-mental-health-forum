@@ -102,8 +102,8 @@
 	height: 150px;
 	border-radius: 150px;
 	background: #7BAECB;
-	position: absolute;
-  top: 85%;
+  position: relative;
+  top: 23rem;
   left: 50%;
   transform: translate(-50%, -50%);
 	overflow:hidden;
@@ -120,8 +120,8 @@
 	width: 170px;
 	height: 170px;
 	border-radius: 200px;
-	position: absolute;
-  top: 85%;
+	position: relative;
+  top: 13rem;
   left: 50%;
   transform: translate(-50%, -50%);
 	overflow:hidden;
@@ -203,7 +203,7 @@ Chat
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  top: 63%;
+  top: 52%;
   right: 5rem;
 }
 
@@ -480,12 +480,12 @@ Bounce
 }
 
 .section-container {
-  height: 55vh;
+  // height: 55vh;
   margin: 8rem 0;
 }
 
 .section-container-small {
-  height: 45vh;
+  // height: 45vh;
   margin: 3rem 0;
 }
 
@@ -618,6 +618,7 @@ Bounce
   font-size: 5rem;
   text-align: center;
   font-weight: 400;
+  margin-top: 130px;
   p {
     font-size: 1.5rem;
     letter-spacing: 10px;

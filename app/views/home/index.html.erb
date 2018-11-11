@@ -40,7 +40,7 @@
   </div>
 </div>
 
-<div class="section-container-small">
+<div class="section-container">
   <div class="title is-1">
     <h3 class="text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">We've all probably felt pretty sh*t in some point of our lives</h3>
   </div>
@@ -67,7 +67,7 @@
 
   <div class="section-one section-container">
 <div class="columns">
-  <div class="column is-7" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+  <div class="column is-7 mt100" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
     <div class="title is-2 pt40">
       <h2 class="text-left"><span class="bold-text">And we get it.</span> Talking about it with anyone can be scary and hard.</h2>
     </div>
@@ -99,7 +99,7 @@
   <div class="section-three section-container">
     <div class="columns">
       <div class="column is-12">
-        <div class="animated-world" data-aos="fade-up" data-aos-duration="300">
+        <div class="animated-world" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
           <div class="world" >
             <div class="land"></div>
             <div class="land"></div>
@@ -123,7 +123,7 @@
             <div class="cloud-counter"></div>
           </div>
         </div>
-        <div class="counter-title mt100">
+        <div class="counter-title">
           <div class="counter-box-text mb10" data-aos="fade-up" data-aos-duration="300">
             <div id="counter">
               <div class="counter-value" data-count="450">0</div>
@@ -137,7 +137,7 @@
     </div>
 
       <div class="section-container">
-    <div class="empower">
+    <div class="empower" data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
       <h3 class="title is-3 text-center">You're never alone. Join the community.</h3>
       <%= image_tag("lets-talkgood.gif", :alt => "People talking") %>
       <% if user_signed_in? %>
@@ -146,7 +146,7 @@
       </div>
       <% end %>
       <% if !user_signed_in? %>
-      <div class="footer-cta">
+      <div class="footer-cta" data-aos="fade-up" data-aos-duration="300" data-aos-delay="400">
         <%= link_to "Let's Talk", new_user_registration_path, class: "button primary-btn big-btn" %>
       </div>
       <% end %>
