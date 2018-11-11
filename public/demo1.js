@@ -212,31 +212,16 @@ const cloud = document.querySelector('.cloud')
 const mouth = document.querySelector('.mouth')
 const radio = document.querySelector('.fake-radio')
 
-function makeHappy () {
-  cloud.classList.remove('is-sad')
-  cloud.classList.add('is-happy')
-  mouth.setAttribute('d', 'M92 70 C 95 75, 105 75, 107 70')
-}
-function makeSad () {
-  cloud.classList.remove('is-happy')
-  cloud.classList.add('is-sad')
-  mouth.setAttribute('d', 'M95 72 C 95 72, 105 72, 105 72')
-}
+window.onscroll = function() {makeSad()};
 
-happy.addEventListener('click', e => {
-  makeHappy()
-})
-sad.addEventListener('click', e => {
-  makeSad()
-})
-radio.addEventListener('click', e => {
-  if (happy.checked) {
-    sad.checked = true
-    makeSad()
-  }
-  else {
-    happy.checked = true
-    makeHappy()
-  }
-})
-
+function makeSad() {
+    if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1400) {
+      cloud.classList.remove('is-happy')
+      cloud.classList.add('is-sad')
+      mouth.setAttribute('d', 'M95 72 C 95 72, 105 72, 105 72')
+    } else {
+      cloud.classList.remove('is-sad')
+      cloud.classList.add('is-happy')
+      mouth.setAttribute('d', 'M92 70 C 95 75, 105 75, 107 70')
+    }
+}

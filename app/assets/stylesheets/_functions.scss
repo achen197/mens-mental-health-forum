@@ -32,6 +32,8 @@ $spacing-70:  70px;
 $spacing-80:  80px;
 $spacing-90:  90px;
 $spacing-100: 100px;
+$spacing-150: 150px;
+$spacing-200: 200px;
 
 // Padding
 // ------------------------------------
@@ -184,6 +186,8 @@ $spacing-100: 100px;
 .mt80  { margin-top: $spacing-80; }
 .mt90  { margin-top: $spacing-90; }
 .mt100 { margin-top: $spacing-100; }
+.mt150 { margin-top: $spacing-150; }
+.mt200 { margin-top: $spacing-200; }
 
 .mv0   { margin-top: 0; margin-bottom: 0; }
 .mv10  { margin-top: $spacing-10; margin-bottom: $spacing-10; }
@@ -213,4 +217,5 @@ $spacing-100: 100px;
 .text-left {text-align: left;}
 .text-right {text-align: right;}
 .bold-text {font-weight: 700 !important; }
+.white-text {color: white !important; }
 

@@ -3,9 +3,14 @@
     <div class="column is-6" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
       <h3 class="title is-1 header-title">Our culture doesn’t always leave space for men to express their internal struggle.</h3>
       <h3 class="title is-2 mt50 mb50">Let’s change that. Let's talk</h3>
+        <div class="cta-container">
         <p class="control">
           <%= link_to "Join The Discussion", new_user_registration_path, class: "button primary-btn cta-btn mt20" %>
         </p>
+         <p class="control ml20">
+          <a href="#about" class="button primary-btn cta-btn cta-btn-outline mt20">About Us</a>
+        </p>
+        </div>
     </div>
     <div class="column is-6" data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">
         <div class="login-logo">
@@ -14,7 +19,21 @@
     </div>
   </div>
 
-<div class="section-container">
+<div id="about" class="section-container">
+  <div class="columns">
+    <div class="column is-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+      <div class="login-logo">
+        <%= image_tag("what-05.png", :alt => "what") %>
+        </div>
+    </div>
+    <div class="column is-8 mt150" data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">
+      <p class="what">Let’s talk is a safe space where men are able to openly discuss their feelings and empower others to do the same and eventually destroying the stigma about opening up about their feelings. </p>
+      <p class="what mt40">As more men speak out about their struggles and experiences with mental health, other men will not feel as alone. Continuing to spread this awareness and normalise the fact that it can be hard to manage everyday demands.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-container-small">
   <div class="title is-1">
     <h3 class="text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">We've all probably felt pretty sh*t in some point of our lives</h3>
   </div>
@@ -35,15 +54,6 @@
   <circle class="eyelid eyelid--right" cx="143" cy="46" r="7" />
   <path class="mouth" d="M92 70 C 95 75, 105 75, 107 70" />
 </svg>
-
-<%# <form id="happy-sad-cloud">
-  <input type="radio" id="happy" name="mood" checked>
-  <label class="label" for="happy">Happy!</label>
-  <input type="radio" id="sad" name="mood">
-  <label class="label" for="sad">Sad</label>
-  <span class="fake-radio"></span>
-</form> %>
-
 </div>
 
 </div>
@@ -55,13 +65,12 @@
       <h2 class="text-left"><span class="bold-text">And we get it.</span> Talking about it with anyone can be scary and hard.</h2>
     </div>
     <div class="title is-4">
-      <h3 class="mt50"><span class="bold-text">But it doesn't have to be.</span> Have a go and chat with our good mate Jake
+      <h3 class="mt50"><span class="bold-text">But it doesn't have to be.</span> Have a go and chat with our good mate Jake 👉
       </h4>
-      <%= image_tag("thiccarrow-04.png", :class => "chat-arrow", :alt => "arrow") %>
     </div>
   </div>
-  <div class="column is-5" data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">
-    <div class="chat">
+  <div class="column is-5">
+    <div class="chat" data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">
       <div class="chat-title">
         <h1>Jake Smith</h1>
         <h2>A Mate</h2>
@@ -117,26 +126,13 @@
           <p data-aos="fade-up" data-aos-duration="500">PEOPLE AROUND THE WORLD SUFFER FROM <span data-aos="fade-up" data-delay="1000">MENTAL ILLNESS</span></p>
         </div>
       </div>
+    </div>
 
-       <%# <div class="column is-5">
-         <div id=word-container>
-          1 in
-          <div id=flip>
-          <div><div>2</div></div>
-            <div><div>5</div></div>
-            <div><div>8</div></div>
-          </div>
-          Men will experience
-            <div id=flip>
-            <div><div>mental health problems</div></div>
-            <div><div>anxiety</div></div>
-            <div><div>depression</div></div>
-          </div>
-      </div> %>
-
+      <div class="section-container">
+    <div class="empower">
+      <h3 class="title is-3">You're never alone. Join the community.</h3>
     </div>
   </div>
-
-
+  </div>
 
 </div>

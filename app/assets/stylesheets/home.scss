@@ -23,9 +23,12 @@
   max-width: 70%;
 }
 
-.cta-btn {
-  padding: 1.5rem 2rem !important;
-  font-size: 0.875rem !important;
+.what {
+  font-size: 1.3rem;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: #BBB;
 }
 
 .home-story {
@@ -38,6 +41,9 @@
   align-items: center !important;
 }
 
+#about {
+  margin-bottom: 14rem;
+}
 
 //demo stuff
 
@@ -97,7 +103,7 @@
 	border-radius: 150px;
 	background: #7BAECB;
 	position: absolute;
-  top: 80%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
 	overflow:hidden;
@@ -115,7 +121,7 @@
 	height: 170px;
 	border-radius: 200px;
 	position: absolute;
-  top: 80%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
 	overflow:hidden;
@@ -180,20 +186,18 @@ Chat
 .chat {
   width: 350px;
   height: 80vh;
-  max-height: 420px;
+  max-height: 460px;
   z-index: 2;
   overflow: hidden;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
-  // background: rgba(0, 0, 0, .5);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   background: white;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  top: 64%;
-  right: -5rem;
-  transform: translate(-50%, -50%);
+  top: 63%;
+  right: 5rem;
 }
 
 
@@ -474,6 +478,11 @@ Bounce
   margin: 8rem 0;
 }
 
+.section-container-small {
+  height: 45vh;
+  margin: 3rem 0;
+}
+
 .sad-cloud {
   display: block;
   margin: 0 auto;
@@ -623,5 +632,9 @@ Bounce
   position: absolute;
   left: 52%;
   top: 62.5%;
+}
+
+.discussion-cta {
+  display: inline-flex;
 }
 

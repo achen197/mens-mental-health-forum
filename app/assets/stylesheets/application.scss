@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: 'Rubik', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   background: #132028;
   overflow: hidden;
   color: #FFF;
@@ -82,7 +82,21 @@ a.navbar-item {
 .navbar-end {
   .navbar-link {
     color: white;
+    background: none !important;
+    &:hover {
+      color: white;
+    }
   }
+}
+
+.navbar-dropdown a.navbar-item:hover {
+  color: #ec7d0a;
+}
+
+.navbar-link::after {
+  border: 1px solid white;
+  border-right: 0;
+  border-top: 0;
 }
 
 .navbar-item .has-dropdown .is-hoverable {
@@ -165,6 +179,10 @@ a.navbar-item {
   color: #fff;;
   font-weight: 400;
   line-height: 1.8rem;
+}
+
+.content p, strong{
+  color: white;
 }
 
 .content p:not(:last-child) {
@@ -284,13 +302,33 @@ a.navbar-item {
   color: white;
 }
 
-.primary-btn, .long {
+.primary-btn-short {
+  padding: 0 2rem !important;
+}
+
+.primary-btn-long {
   padding: 0 10rem !important;
 }
 
-.primary-btn, .short {
-  padding: 0 2rem !important;
+.cta-container {
+  display: inline-flex;
+
+  .cta-btn {
+    padding: 1.5rem 2rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .cta-btn-outline {
+    background: none;
+    border: 3px solid #ec7d0a;
+    border-radius: 55px;
+    &:hover {
+      border: 3px solid #ffb631;
+    }
+  }
 }
+
+
 
 .search-bar {
   width: 400px;
@@ -553,3 +591,11 @@ a.navbar-item {
   color: #fff;
 }
 
+.box {
+  background: none;
+  border-radius: 11px;
+  box-shadow: 0 5px 11px rgba(10, 10, 10, 0.4), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: white;
+  display: block;
+  padding: 1.25rem;
+}
