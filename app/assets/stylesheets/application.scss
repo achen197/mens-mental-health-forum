@@ -44,6 +44,9 @@ abbr[title], acronym[title] {
 a {
   color: #ec7d0a;
   font-weight: 700;
+  &:hover {
+    color: #ffb631;
+  }
 }
 
 .title {
@@ -241,6 +244,9 @@ a.navbar-item {
 }
 
 .single-discussion {
+  background: #16242d;
+  border-radius: 15px;
+  padding: 2rem;
   .discussion-channel, .discussion-article {
     .discussion-tite a {
     font-size: 0.75rem;
