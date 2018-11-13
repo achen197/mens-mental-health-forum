@@ -260,6 +260,9 @@ a.navbar-item {
 .topic-list li a {
   line-height: 40px;
   color: white;
+  &:hover {
+    color: #ec7d0a;
+  }
 }
 
 .disucssion-content p{
@@ -554,6 +557,10 @@ a.navbar-item {
   border-radius: 15px;
   border: none;
   box-shadow: none;
+  transition: all .1s ease-in-out;
+  &:hover {
+    transform: scale(1.03) !important;
+  }
 }
 
 .card-body {
