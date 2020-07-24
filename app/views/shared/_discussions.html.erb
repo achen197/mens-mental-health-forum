@@ -1,11 +1,14 @@
 
 <div class="column is-8">
-  <h3 class="title is-5">Latest Discussions</h3>
+  <div class="discussion-cta">
+    <h3 class="title is-5">Latest Discussions</h3>
+    <%= link_to 'New Discussion', new_discussion_path, class:"button discussion-btn ml20" %>
+  </div>
   <div class="discussions">
     <% @discussions.each do |discussion| %>
       <div class="columns discussion-container pv10">
         <div class="column is-1">
-          <%# <%= gravatar_image_tag(discussion.user.email, class:'border-radius-50', size: 48, alt: discussion.user.username) %> %>
+          <%= gravatar_image_tag(discussion.user.email, class:'border-radius-50', size: 48, alt: discussion.user.username) %>
         </div>
         <div class="column is-8">
           <div class="discussions-channel">
